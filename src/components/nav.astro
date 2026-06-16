@@ -1,0 +1,60 @@
+<!-- src/components/nav.astro -->
+---
+const currentPath = Astro.url.pathname;
+import "../styles/colors.css"
+---
+
+<nav class="tab-bar">
+    <h2 class="title">Teenoi Electronics</h2>
+    <h2 class="title">32359</h2>
+    
+    <div class = "spacer"></div>
+
+    <a href="/" class={currentPath === "/" ? "tab active" : "tab"}>home</a>
+    <a href="/our-robots" class={currentPath === "/our-robots" ? "tab active" : "tab"}>our robots</a>
+    <a href="/competition-history" class={currentPath === "/competition-history" ? "tab active" : "tab"}>competition history</a>
+    <a href="/competition-profiles" class={currentPath === "/competition-profiles" ? "tab active" : "tab"}>competition profiles</a>
+    <a href="/sponsors" class={currentPath === "/sponsors" ? "tab active" : "tab"}>sponsors</a>
+    <a href="/contact" class={currentPath === "/contact" ? "tab active" : "tab"}>contact</a>
+</nav>
+
+<style>
+    .tab-bar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 99%;
+
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        border-bottom: 2px solid var(--color-secondary);
+        background-color: var(--color-tertiary);
+        margin-top: -0.5rem;
+        padding-left: 10px;
+        padding-right: 10px;
+
+        z-index: 100;
+    }
+
+    .tab {
+        padding: 8px 16px;
+        text-decoration: none;
+        color: white;
+    }
+
+    .tab:first-of-type {
+        margin-left: auto;
+    }
+
+    .tab.active {
+        background: var(--color-secondary);
+        color: var(--color-accent);
+        border-radius: 4px 4px 4px 4px;
+    }
+    
+    .title {
+        color: white;
+    }
+
+</style>
