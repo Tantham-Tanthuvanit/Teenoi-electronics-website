@@ -10,12 +10,17 @@ import "../styles/colors.css"
     
     <div class = "spacer"></div>
 
+    <!--Mobile button for expanding tab -->
+    <button class="hamburger" id="hamburger">☰</button>
+
+    <div class="tabs" id="tabs">
     <a href="/" class={currentPath === "/" ? "tab active" : "tab"}>home</a>
     <a href="/our-robots" class={currentPath === "/our-robots" ? "tab active" : "tab"}>our robots</a>
     <a href="/competition-history" class={currentPath === "/competition-history" ? "tab active" : "tab"}>competition history</a>
     <a href="/competition-profiles" class={currentPath === "/competition-profiles" ? "tab active" : "tab"}>competition profiles</a>
     <a href="/sponsors" class={currentPath === "/sponsors" ? "tab active" : "tab"}>sponsors</a>
     <a href="/contact" class={currentPath === "/contact" ? "tab active" : "tab"}>contact</a>
+    </div>
 </nav>
 
 <style>
@@ -37,14 +42,16 @@ import "../styles/colors.css"
         z-index: 100;
     }
 
+    .tabs {
+        display: flex;
+        margin-left: auto;
+        gap: 8px;
+    }
+
     .tab {
         padding: 8px 16px;
         text-decoration: none;
         color: white;
-    }
-
-    .tab:first-of-type {
-        margin-left: auto;
     }
 
     .tab.active {
@@ -57,4 +64,42 @@ import "../styles/colors.css"
         color: white;
     }
 
+    .hamburger {
+        display: none;
+        margin-left: auto;
+        background: none;
+        font-size: 24px;
+        cursor: pointer;
+    }
+
+    @media (max-width: 768px) {
+        .tab-bar {
+            flex-wrap: wrap;
+        }
+        .hamburger {
+            display: block;
+        }
+
+        .tabs {
+            display: none;
+            width: 100%;
+            flex-direction: column;
+            background: var(--color-tertiary);
+            padding: 8px;
+        }
+
+        .tabs.open {
+            display: flex;
+        }
+    }
+
 </style>
+
+<script>
+    const hamburger = document.getElementById("hamburger");
+    const tabs = document.getElementById("tabs");
+
+    hamburger?.addEventListener("click", () => {
+        tabs?.classList.toggle("open");
+    });
+</script>
