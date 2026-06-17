@@ -5,3 +5,12 @@
     --color-secondary: #D8572A;
     --color-tertiary: #C32F27;
 }
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--color-background);
+    padding-top: 60px;
+}
