@@ -1,0 +1,56 @@
+---
+import "../styles/colors.css"
+// properties
+const { robot_name, season, text, robot_image} = Astro.props;
+---
+
+<div class="robot-component">
+    <img src={robot_image} class="robot-img">
+    <div class="robot-text">
+        <h1 class="Robot name">{robot_name}</h1>
+        <h2 class="Season">{season}</h2>
+        <p class="Robot desc">
+            {text}
+        </p>
+    </div>
+</div>
+
+<style>
+    .robot-component {
+        width: 60%;
+
+        display: flex;
+        flex-direction: row;
+        gap: 16px;
+
+        padding: 2rem;
+        border: 0.3rem, solid, var(--color-secondary);
+        border-radius: 1rem;
+        background-color: var(--color-tertiary);
+    }
+
+    .robot-img {
+        width: 40%;
+        border-radius: 1rem;
+        border: 0.2rem, solid, var(--color-accent);
+    }
+
+    .robot-text {
+        width: 100%;
+        gap: 0px;
+    }
+
+    p {
+        font-size: 1.5rem;
+        color: var(--color-primary);
+    }
+
+    h1 {
+        font-size: 3rem;
+        color: var(--color-accent);
+    }
+    h2 {
+        font-size: 2rem;
+        color: var(--color-primary);
+    }
+</style>
