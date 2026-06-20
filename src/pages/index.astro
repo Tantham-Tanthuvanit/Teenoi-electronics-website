@@ -1,56 +1,58 @@
 ---
 // inside the tripple dashes is the component formatter, this code never runs in the browser
 import Nav from "../components/nav.astro";
+import Head from "../components/head.astro";
 ---
 
 <html>
-	<head>
-		<meta charset="UTF-8"/>
-		<title>teenoi electronics</title>
-		<link rel="stylesheet" href="/styles/colors.css" />
-	</head>
+	<Head />
 	<body>
 		<!--navigation bar -->
 		<Nav />
 
 		<!--about our team -->
 		<div class="title-section">
-		<h1 class="title">About Teenoi electronics</h1>
+			<h1 class="title">About Teenoi electronics</h1>
 		</div>
 		<p class="paragraph">
-		Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-		incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
-		nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-		Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
-		eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-		sunt in culpa qui officia deserunt mollit anim id est laborum.
+			Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+			eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+			ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+			aliquip ex ea commodo consequat. Duis aute irure dolor in
+			reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+			pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+			culpa qui officia deserunt mollit anim id est laborum.
 		</p>
 
 		<!--our mission -->
 		<div class="title-section">
-		<h1 class="secondary-title">Our mission</h2>
+			<h1 class="secondary-title">Our mission</h1>
 		</div>
 		<p class="paragraph">
-		Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-		incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
-		nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-		Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
-		eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-		sunt in culpa qui officia deserunt mollit anim id est laborum.
+			Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+			eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+			ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+			aliquip ex ea commodo consequat. Duis aute irure dolor in
+			reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+			pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+			culpa qui officia deserunt mollit anim id est laborum.
 		</p>
 
 		<!--about first -->
-		<div class = "title-section">
-		<h1 class="secondary-title">About the <i>FIRST</i><sup>©</sup> Tech Challenge</h1>
-		<img src="/public/images/FTC-logo.svg" class="ftc-logo">
+		<div class="title-section">
+			<h1 class="secondary-title">
+				About the <i>FIRST</i><sup>©</sup> Tech Challenge
+			</h1>
+			<img src="/public/images/FTC-logo.svg" class="ftc-logo" />
 		</div>
 		<p class="paragraph">
-		Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-		incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
-		nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-		Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
-		eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-		sunt in culpa qui officia deserunt mollit anim id est laborum.
+			Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+			eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+			ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+			aliquip ex ea commodo consequat. Duis aute irure dolor in
+			reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+			pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+			culpa qui officia deserunt mollit anim id est laborum.
 		</p>
 	</body>
 </html>
@@ -80,5 +82,21 @@ import Nav from "../components/nav.astro";
 
 	.ftc-logo {
 		width: 100px;
+	}
+
+	@media (max-width: 1200px) {
+		.title-section {
+			display: flex;
+			flex-direction: row;
+			gap: 16px;
+			width: 80%;
+		}
+
+		.paragraph {
+			font-size: 24px;
+			max-width: 80%;
+
+			color: var(--color-primary);
+		}
 	}
 </style>
