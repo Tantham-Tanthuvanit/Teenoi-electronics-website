@@ -22,7 +22,7 @@ import "../styles/colors.css";
         <img src={event_logo} class="event-logo">
     </div>
 
-    <p>For more information click <a href={event_link}>here</a></p>
+    <p class="more-info">For more information click <a href={event_link}>here</a></p>
 
 </div>
 
@@ -35,6 +35,7 @@ import "../styles/colors.css";
         padding-left: 10px;
         
         background-color: var(--color-tertiary);
+        margin-bottom: 20px;
     }
 
     .Other-information-box {
@@ -51,6 +52,18 @@ import "../styles/colors.css";
     .event-logo {
         width:15%;
         margin: 10px;
+    }
+
+    .event-name {
+        color: var(--color-accent);
+    }
+
+    .event-information {
+        color: var(--color-primary);
+    }
+
+    .more-info {
+        color: var(--color-accent)
     }
 
     @media (max-width: 1200px) {

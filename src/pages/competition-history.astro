@@ -3,22 +3,49 @@
 import Nav from "../components/nav.astro"
 import Event from "../components/event.astro"
 import Head from "../components/head.astro"
+import "../styles/colors.css"
 ---
 
 <html>
 	<Head/>
 	<body>
 	<Nav/>
+	<h1 class="events-title">Upcoming Events</h1>
+	<Event
+		event_name = "FTC BIOBUZZ Thailand Championship 2026-2027"
+		event_date = "December 2026"
+		event_time = "TBD"
+		event_location = "The Prince Royal's College: PRC"
+		event_adress = "117 KaewNawarat Rd., Wat Kate Muang, Chiang Mai, Thailand, 50000"
+		event_link = "https://www.firstinspires.org/programs/ftc/game-and-season"
+		event_logo = "/public/images/BIOBUZZ_logo.svg"
+	/>
+	<h1 class="events-title">Past Events</h1>
 	<Event
 		event_name = "FTC DECODE Thailand Championship 2025-2026"
-		event_date = "8th - 19th December 2025"
+		event_date = "8th - 11th December 2025"
 		event_time = "9:00 - 16:00 Everyday"
 		event_location = "The Prince Royal's College: PRC"
 		event_adress = "117 KaewNawarat Rd., Wat Kate Muang, Chiang Mai, Thailand, 50000"
 		event_link = "https://ftc-events.firstinspires.org/2025/THCMP"
 		event_logo = "/public/images/DECODE_logo.svg"
 	/>
+
+	<Event
+		event_name = "FTC INTO THE DEEP Thailand Championship 2024-2025"
+		event_date = "10th - 13th December 2025"
+		event_time = "9:00 - 16:00 Everyday"
+		event_location = "The Prince Royal's College: PRC"
+		event_adress = "117 KaewNawarat Rd., Wat Kate Muang, Chiang Mai, Thailand, 50000"
+		event_link = "https://firstroboticsbc.org/ftc/intothedeep-season/"
+		event_logo = "/public/images/IntoTheDeep_logo.svg"
+	/>
 	</body>
 </html>
+
 <style>
+	.events-title {
+		color: var(--color-accent);
+		font-size: 3rem;
+	}
 </style>
