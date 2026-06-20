@@ -1,11 +1,24 @@
-
 ---
 // inside the tripple dashes is the component formatter, this code never runs in the browser
 import Nav from "../components/nav.astro"
+import Event from "../components/event.astro"
+import Head from "../components/head.astro"
 ---
 
 <html>
+	<Head/>
+	<body>
 	<Nav/>
+	<Event
+		event_name = "FTC DECODE Thailand Championship 2025-2026"
+		event_date = "8th - 19th December 2025"
+		event_time = "9:00 - 16:00 Everyday"
+		event_location = "The Prince Royal's College: PRC"
+		event_adress = "117 KaewNawarat Rd., Wat Kate Muang, Chiang Mai, Thailand, 50000"
+		event_link = "https://ftc-events.firstinspires.org/2025/THCMP"
+		event_logo = "/public/images/DECODE_logo.svg"
+	/>
+	</body>
 </html>
 <style>
 </style>

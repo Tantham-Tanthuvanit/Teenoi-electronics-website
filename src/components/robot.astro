@@ -1,11 +1,11 @@
 ---
-import "../styles/colors.css"
+import "../styles/colors.css";
 // properties
-const { robot_name, season, text, robot_image} = Astro.props;
+const { robot_name, season, text, robot_image } = Astro.props;
 ---
 
 <div class="robot-component">
-    <img src={robot_image} class="robot-img">
+    <img src={robot_image} class="robot-img" />
     <div class="robot-text">
         <h1 class="Robot name">{robot_name}</h1>
         <h2 class="Season">{season}</h2>
@@ -52,5 +52,22 @@ const { robot_name, season, text, robot_image} = Astro.props;
     h2 {
         font-size: 2rem;
         color: var(--color-primary);
+    }
+
+    @media (max-width: 1000px) {
+        .robot-component {
+            width: 80%;
+            margin: 8px;
+            margin-top: 10px;
+
+            display: flex;
+            flex-direction: row;
+            gap: 16px;
+
+            padding: 2rem;
+            border: 0.3rem solid var(--color-secondary);
+            border-radius: 1rem;
+            background-color: var(--color-tertiary);
+        }
     }
 </style>

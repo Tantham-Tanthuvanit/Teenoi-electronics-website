@@ -13,4 +13,6 @@ body {
     align-items: center;
     background-color: var(--color-background);
     padding-top: 80px;
+
+    font-family: 'Arimo', sans-serif;
 }

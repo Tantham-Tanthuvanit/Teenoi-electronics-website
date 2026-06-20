@@ -1,7 +1,67 @@
 ---
-const { event_name, event_date, event_time, event_location, event_adress} = Astro.props;
+const { event_name, event_date, event_time, event_location, event_adress, event_link, event_logo } =
+    Astro.props;
+
+import "../styles/colors.css";
 ---
 
-<div>
+<div class="event-box">
+    <h1 class="event-name">{event_name}</h1>
+
+    <div class="event-information">
+        <div class="date-time-location-box">
+            <h3 class="date">{event_date}</h3>
+            <h3 class="time">{event_time}</h3>
+        </div>
+
+        <div class="Other-information-box">
+            <h2 class="event_location">{event_location}</h2>
+            <h3 class="event_adress">{event_adress}</h2>
+        </div>
+
+        <img src={event_logo} class="event-logo">
+    </div>
+
+    <p>For more information click <a href={event_link}>here</a></p>
 
 </div>
+
+<style>
+    .event-box {
+        width: 40%;
+        height: auto;
+        border: 0.2rem, solid, var(--color-secondary);
+        border-radius: 1rem;
+        padding-left: 10px;
+        
+        background-color: var(--color-tertiary);
+    }
+
+    .Other-information-box {
+        width: 90%;
+        margin: 10px;
+        margin-top: 0;
+    }
+
+    .event-information {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .event-logo {
+        width:15%;
+        margin: 10px;
+    }
+
+    @media (max-width: 1200px) {
+        .event-box {
+            width: 80%;
+            height: auto;
+            border: 0.2rem, solid, var(--color-secondary);
+            border-radius: 1rem;
+            padding-left: 10px;
+
+            background-color: var(--color-tertiary);
+        }
+    }
+</style>

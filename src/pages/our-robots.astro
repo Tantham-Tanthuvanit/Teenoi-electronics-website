@@ -1,11 +1,13 @@
 
 ---
-// inside the tripple dashes is the component formatter, this code never runs in the browser
 import Nav from "../components/nav.astro"
 import RobotCom from "../components/robot.astro"
+import Head from "../components/head.astro"
 ---
 
 <html>
+	<Head/>
+	<body>
 	<Nav/>
 	<RobotCom 
 		robot_image = "/public/images/2025-2026-robot.svg"
@@ -20,6 +22,7 @@ import RobotCom from "../components/robot.astro"
 		sunt in culpa qui officia deserunt mollit anim id est laborum.
 		"
 	/>
+	</body>
 </html>
 
 <style>
