@@ -7,9 +7,9 @@ const { robot_name, season, text, robot_image } = Astro.props;
 <div class="robot-component">
     <img src={robot_image} class="robot-img" />
     <div class="robot-text">
-        <h1 class="Robot name">{robot_name}</h1>
-        <h2 class="Season">{season}</h2>
-        <p class="Robot desc">
+        <h1 class="robot-name">{robot_name}</h1>
+        <h2 class="season">{season}</h2>
+        <p class="robot-desc">
             {text}
         </p>
     </div>
@@ -24,9 +24,11 @@ const { robot_name, season, text, robot_image } = Astro.props;
         gap: 16px;
 
         padding: 2rem;
-        border: 0.3rem, solid, var(--color-secondary);
+        border: 0.2rem, solid, var(--color-secondary);
         border-radius: 1rem;
         background-color: var(--color-tertiary);
+
+        margin-bottom: 15px;
     }
 
     .robot-img {
@@ -46,11 +48,11 @@ const { robot_name, season, text, robot_image } = Astro.props;
     }
 
     h1 {
-        font-size: 3rem;
+        font-size: 2rem;
         color: var(--color-accent);
     }
     h2 {
-        font-size: 2rem;
+        font-size: 1.75rem;
         color: var(--color-primary);
     }
 
@@ -61,13 +63,26 @@ const { robot_name, season, text, robot_image } = Astro.props;
             margin-top: 10px;
 
             display: flex;
-            flex-direction: row;
+            flex-direction: column;
             gap: 16px;
 
             padding: 2rem;
-            border: 0.3rem solid var(--color-secondary);
+            border: 0.2rem solid var(--color-secondary);
             border-radius: 1rem;
             background-color: var(--color-tertiary);
+            
+            margin-bottom: 15px;
+        }
+
+        .robot-img {
+            width: 100%;
+            border-radius: 1rem;
+            border: 0.2rem, solid, var(--color-accent);
+        }
+
+        .robot-text {
+            width: 100%;
+            gap: 0px;
         }
     }
 </style>
