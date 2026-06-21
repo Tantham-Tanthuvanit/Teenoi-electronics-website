@@ -1,0 +1,88 @@
+---
+const { member_name, member_role, member_image, member_description } =
+    Astro.props;
+import "../styles/colors.css";
+---
+
+<div class="member-container">
+    <img src={member_image} class="image" />
+    <div class="member-info">
+        <h1 class="member-name">{member_name}</h1>
+        <h2 class="member-role">{member_role}</h2>
+        <p class="member-description">{member_description}</p>
+    </div>
+</div>
+
+<style>
+    .member-container {
+        display: flex;
+        flex-direction: row;
+        width: 40%;
+
+        background-color: var(--color-tertiary);
+        padding: 20px;
+        border-radius: 1rem;
+        border: solid, 0.2rem, var(--color-secondary);
+
+        margin-bottom: 15px;
+    }
+
+    .image {
+        width: 40%;
+        margin-right: 20px;
+        border: solid, 0.2rem, var(--color-accent);
+        border-radius: 0.2rem;
+    }
+
+    .member-name {
+        font-size: 2rem;
+        color: var(--color-accent);
+    }
+
+    .member-role {
+        font-size: 1.5rem;
+        color: var(--color-accent);
+    }
+
+    .member-description {
+        font-size: 1rem;
+        color: var(--color-primary);
+    }
+
+    @media (max-width: 1200px) {
+        .member-container {
+            display: flex;
+            flex-direction: column;
+            width: 80%;
+
+            background-color: var(--color-tertiary);
+            padding: 20px;
+            border-radius: 1rem;
+            border: solid, 0.2rem, var(--color-secondary);
+
+            margin-bottom: 15px;
+        }
+
+        .image {
+            width: 100%;
+            margin-right: 0px;
+            border: solid, 0.2rem, var(--color-accent);
+            border-radius: 0.2rem;
+        }
+
+        .member-name {
+            font-size: 2rem;
+            color: var(--color-accent);
+        }
+
+        .member-role {
+            font-size: 1.5rem;
+            color: var(--color-accent);
+        }
+
+        .member-description {
+            font-size: 1rem;
+            color: var(--color-primary);
+        }
+    }
+</style>
